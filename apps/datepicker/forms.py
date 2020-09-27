@@ -13,11 +13,16 @@ class DateForm(forms.Form):
         widget=BootstrapDateTimePickerInput()
     )
 
+
 class DatePickerForm(forms.ModelForm):
     class Meta:
         model = DatePicker
         fields = ['_from', '_to']
         widgets = {
-            '_from': DatePickerInput(), # default date-format %m/%d/%Y will be used
+            '_from': DatePickerInput(
+                options={
+                    'focusOnShow':False
+                }
+            ), # default date-format %m/%d/%Y will be used
             '_to': DatePickerInput(format='%Y-%m-%d'), # specify date-format
         }
