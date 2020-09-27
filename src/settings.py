@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.datepicker',
-    'crispy_forms'
+    'crispy_forms',
+    'bootstrap_datepicker_plus',
+    
 ]
 
 

@@ -19,6 +19,14 @@
     {{ form | crispy  }}
     <button type="submit" class="btn btn-success">Create event</button>
   </form>
+
+  <h1>Using ModelForm</h1>
+  {{form_picker.media}}
+  <form method="post" autocomplete="off" novalidate>
+    {% csrf_token %}
+    {{ form_picker | crispy  }}
+    <button type="submit" class="btn btn-success">Create event</button>
+  </form>
 {% endblock %}
 
 {% block extra_js %}
