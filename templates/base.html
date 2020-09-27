@@ -1,0 +1,41 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{%static 'datepicker/ico/ico.png'%}" type="image/x-icon">
+    <title>DateTime Picker Example</title>
+    <script src="{% static 'datepicker/js/jquery.min.js' %}" ></script>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'datepicker/css/bootstrap.min.css' %}">
+    <!-- Moment.js -->
+    <script src="{% static 'datepicker/js/moment.js' %}"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{% static 'datepicker/css/all.min.css' %}">
+    <script src="{% static 'datepicker/js/all.min.js' %}" ></script>
+
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body>
+    <nav class="navbar navbar-light mb-4 shadow-sm">
+      <div class="container">
+        <a href="{% url 'home' %}" class="navbar-brand mb-0 h1">DateTime Picker Example</a>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <script src="{% static 'datepicker/js/popper.min.js' %}" ></script>
+    <script src="{% static 'datepicker/js/bootstrap.min.js' %}" ></script>
+    {% block extra_js %}
+    {% endblock %}
+  </body>
+</html>
